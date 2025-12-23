@@ -3,7 +3,7 @@ CREATE TABLE users (
  user_id SERIAL PRIMARY KEY,
  name VARCHAR (150) NOT NULL,
  email VARCHAR (100) NOT NULL UNIQUE,
- password VARCHAR (50) DEFAULT '12345',
+ password VARCHAR (50),
  phone VARCHAR (20),
  role VARCHAR (30) CHECK(role IN ('Admin', 'Customer')) DEFAULT 'Customer'
 );
